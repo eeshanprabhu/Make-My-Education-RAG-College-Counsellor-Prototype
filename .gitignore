@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+*.pyc
+.env
+
+# Note: my_chroma_db/ is intentionally committed so the prototype runs on a
+# clean checkout without re-embedding (only 15 small records). Delete this line
+# and uncomment below if you prefer to rebuild via `python ingest.py`.
+# my_chroma_db/
