@@ -1,0 +1,74 @@
+[
+  {
+    "id": "engg_budget_cutoff",
+    "question": "I scored 78% and have a budget of \u20b91.5 lakh/year \u2014 which engineering colleges can I consider?",
+    "expect_answered": true,
+    "must_cite": ["C003", "C009"],
+    "must_not_cite": ["C001"],
+    "notes": "C001 cutoff 82 > 78 so ineligible; C003 (75) and C009 (70) are within budget and eligible."
+  },
+  {
+    "id": "mba_cost",
+    "question": "Which colleges offer an MBA, and what do they cost?",
+    "expect_answered": true,
+    "must_cite": ["C002", "C004"],
+    "answer_contains_any": ["98000", "98,000", "175000", "1,75,000"],
+    "notes": "C002 and C004 offer MBA."
+  },
+  {
+    "id": "govt_hostel",
+    "question": "List the government colleges that have hostel facilities.",
+    "expect_answered": true,
+    "must_cite": ["C007", "C012"],
+    "must_not_cite": ["C005", "C011"],
+    "notes": "Government + hostel=Yes are C007 and C012; C005 and C011 are government but hostel=No."
+  },
+  {
+    "id": "placement_lookup",
+    "question": "What\u2019s the average placement package at North Ridge Institute of Technology?",
+    "expect_answered": true,
+    "must_cite": ["C001"],
+    "answer_contains_any": ["6.5"],
+    "notes": "Single-entity lookup; avg_placement_lpa = 6.5."
+  },
+  {
+    "id": "phd_refusal",
+    "question": "Does Ganga Valley University offer a PhD in Physics?",
+    "expect_answered": false,
+    "notes": "Not in the data \u2014 must refuse, not guess."
+  },
+  {
+    "id": "scholarship_freetext",
+    "question": "Which colleges offer scholarships for students from low-income families?",
+    "expect_answered": true,
+    "must_cite": ["C002", "C004"],
+    "notes": "Answerable only from about field: C002 (need-based concession < 4 lakh income), C004 (alumni need-based)."
+  },
+  {
+    "id": "best_per_semester_units",
+    "question": "Which college is best for me? I have \u20b91 lakh per semester.",
+    "expect_answered": true,
+    "answer_contains_any": ["semester", "per year", "2 lakh", "2,00,000", "200000", "assum"],
+    "notes": "Unit trap: 1 lakh/sem = 2 lakh/yr. Should state the conversion/assumption."
+  },
+  {
+    "id": "mbbs_match",
+    "question": "Which colleges offer MBBS?",
+    "expect_answered": true,
+    "must_cite": ["C006"],
+    "notes": "Unseen-style variant: only C006 offers MBBS."
+  },
+  {
+    "id": "off_topic_refusal",
+    "question": "What is the capital of France?",
+    "expect_answered": false,
+    "notes": "Out of scope for the college dataset \u2014 must refuse."
+  },
+  {
+    "id": "cheapest_govt",
+    "question": "Which is the cheapest government college?",
+    "expect_answered": true,
+    "must_cite": ["C007"],
+    "notes": "Superlative over a filter: C007 at \u20b915,000/yr is the cheapest government college."
+  }
+]
